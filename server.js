@@ -15,8 +15,8 @@ const sqldatabase = knex({
       connectionString : process.env.DATABASE_URL,
       ssl: {
         rejectUnauthorized: false
-      } 
-    }
+      }, 
+    },
   });
 
 app.use(express.json());
