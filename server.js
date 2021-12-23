@@ -13,6 +13,7 @@ const sqldatabase = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
+      sslmode: require,
       ssl: {
         rejectUnauthorized: false,
       }, 
