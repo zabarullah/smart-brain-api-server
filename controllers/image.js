@@ -5,7 +5,7 @@ const app = new Clarifai.App({
   });
 // will try '53e1df302c079b3db8a0a36033ed2d15' instead of Clarifai.FACE_DETECT_MODEL, as the latter is not working
 const handleApiCall = (req, res) => {
-    app.models.predict('53e1df302c079b3db8a0a36033ed2d15', req.body.input)
+    app.models.predict('6dc7e46bc9124c5c8824be4822abe105', req.body.input)
     .then(data => {
         res.json(data);
         console.log(data); 
