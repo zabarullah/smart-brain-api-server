@@ -1,7 +1,7 @@
 const Clarifai = require('clarifai'); 
 
 const app = new Clarifai.App({
-    apiKey: 'http://localhost:3000' /* The key is a config var - Environment variable onHeroky settings */
+    apiKey: '6b3500d33e07448f97c71d3951597925' /* The key is a config var - Environment variable onHeroky settings */
   });
 
 const handleApiCall = (req, res) => {
