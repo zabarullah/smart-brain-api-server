@@ -3,9 +3,14 @@ const Clarifai = require('clarifai');
 const app = new Clarifai.App({
     apiKey: '6b3500d33e07448f97c71d3951597925' /* The key is a config var - Environment variable onHeroky settings */
   });
-// will try '53e1df302c079b3db8a0a36033ed2d15' instead of Clarifai.FACE_DETECT_MODEL, as the latter is not working
+// will try below object with api details instead of Clarifai.FACE_DETECT_MODEL, as the latter is not working
 const handleApiCall = (req, res) => {
-    app.models.predict('53e1df302c079b3db8a0a36033ed2d15', req.body.input)
+    app.models.predict({
+        id: 'face-detection',
+        name: 'face-detection',
+        version: '6dc7e46bc9124c5c8824be4822abe105',
+        type: 'visual-detector',
+    }, req.body.input)
     .then(data => {
         res.json(data);
         console.log(data); 
